@@ -1,0 +1,56 @@
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Main navigation">
+        <!-- Skip to content link for accessibility -->
+        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-amber-500 text-white px-4 py-2 rounded z-50">
+            跳至主要內容 | Skip to main content
+        </a>
+        
+        <div class="flex justify-between items-center h-16">
+            <!-- Logo / Restaurant Name -->
+            <div class="flex-shrink-0">
+                <a href="/" class="flex items-center space-x-2">
+                    <div class="text-2xl font-bold text-amber-800">
+                        {{ restaurant.name_zh }}
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Navigation Links (Desktop) -->
+            <div class="hidden md:flex md:items-center md:space-x-8">
+                <a href="#menu" class="text-gray-700 hover:text-amber-600 transition-colors font-medium">
+                    菜單 | Menu
+                </a>
+                <a href="#contact" class="text-gray-700 hover:text-amber-600 transition-colors font-medium">
+                    聯絡我們 | Contact
+                </a>
+                <a href="tel:{{ restaurant.phone }}" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                    立即訂餐 | Order Now
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button type="button" id="mobile-menu-button" class="text-gray-700 hover:text-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="md:hidden mobile-menu hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#menu" class="block px-3 py-2 text-gray-700 hover:text-amber-600 hover:bg-amber-50 rounded-md font-medium">
+                    菜單 | Menu
+                </a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-amber-600 hover:bg-amber-50 rounded-md font-medium">
+                    聯絡我們 | Contact
+                </a>
+                <a href="tel:{{ restaurant.phone }}" class="block px-3 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-md font-bold text-center">
+                    立即訂餐 | Order Now
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>

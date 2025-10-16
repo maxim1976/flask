@@ -1,0 +1,302 @@
+{
+  "restaurant": {
+    "name_zh": "無名台式早餐店",
+    "name_en": "Wuming Taiwanese Breakfast",
+    "tagline_zh": "線上訂餐系統",
+    "tagline_en": "Online Ordering System",
+    "description_zh": "道地台式早餐，每日新鮮現做",
+    "description_en": "Authentic Taiwanese breakfast, freshly made daily",
+    "address_zh": "花蓮縣花蓮市吉鄉鄉德安一街59號",
+    "address_en": "No. 59, Dean 1st St, Hualien City, Hualien County, 970",
+    "phone": "03-8335408",
+    "phone_display": "038335408",
+    "hours_zh": "早上 5:30 - 10:30 (週一公休)",
+    "hours_en": "5:30 AM - 10:30 AM (Closed Mondays)",
+    "social_media": {
+      "facebook": "",
+      "instagram": ""
+    }
+  },
+  "categories": [
+    {
+      "id": "shao-bing",
+      "name_zh": "燒餅系列",
+      "name_en": "Sesame Flatbread Series",
+      "items": [
+        {
+          "id": "shao-bing-you-tiao",
+          "name_zh": "燒餅夾油條",
+          "name_en": "Sesame Flatbread with Fried Dough",
+          "price": 44,
+          "is_vegetarian": true
+        },
+        {
+          "id": "shao-bing",
+          "name_zh": "燒餅",
+          "name_en": "Sesame Flatbread",
+          "price": 22,
+          "is_vegetarian": true
+        },
+        {
+          "id": "shao-bing-cong-dan",
+          "name_zh": "燒餅夾蔥蛋",
+          "name_en": "Sesame Flatbread with Scallion Egg",
+          "price": 44,
+          "is_vegetarian": true
+        },
+        {
+          "id": "shao-bing-he-bao-dan",
+          "name_zh": "燒餅夾荷包蛋",
+          "name_en": "Sesame Flatbread with Fried Egg",
+          "price": 37,
+          "is_vegetarian": true
+        },
+        {
+          "id": "shao-bing-dan-bing",
+          "name_zh": "燒餅夾蛋餅",
+          "name_en": "Sesame Flatbread with Egg Crepe",
+          "price": 54,
+          "is_vegetarian": true
+        },
+        {
+          "id": "shao-bing-you-tiao-cong-dan",
+          "name_zh": "燒餅油條加蔥蛋",
+          "name_en": "Sesame Flatbread with Fried Dough & Scallion Egg",
+          "price": 66,
+          "is_vegetarian": true
+        },
+        {
+          "id": "shao-bing-you-tiao-he-bao",
+          "name_zh": "燒餅加荷包蛋",
+          "name_en": "Sesame Flatbread with Fried Egg",
+          "price": 59,
+          "is_vegetarian": true
+        },
+        {
+          "id": "shao-bing-ban-you-tiao-cong",
+          "name_zh": "燒餅半油條加蔥蛋",
+          "name_en": "Sesame Flatbread with Half Fried Dough & Scallion Egg",
+          "price": 55,
+          "is_vegetarian": true
+        },
+        {
+          "id": "shao-bing-ban-you-tiao-he-bao",
+          "name_zh": "燒餅半油條加荷包蛋",
+          "name_en": "Sesame Flatbread with Half Fried Dough & Fried Egg",
+          "price": 48,
+          "is_vegetarian": true
+        },
+        {
+          "id": "shao-bing-ban-you-tiao",
+          "name_zh": "燒餅夾半條油條",
+          "name_en": "Sesame Flatbread with Half Fried Dough",
+          "price": 33,
+          "is_vegetarian": true
+        }
+      ]
+    },
+    {
+      "id": "dan-bing",
+      "name_zh": "蛋餅系列",
+      "name_en": "Egg Crepe Series",
+      "items": [
+        {
+          "id": "dan-bing-you-tiao",
+          "name_zh": "蛋餅夾油條",
+          "name_en": "Egg Crepe with Fried Dough",
+          "price": 54,
+          "is_vegetarian": true
+        },
+        {
+          "id": "dan-bing",
+          "name_zh": "蛋餅",
+          "name_en": "Egg Crepe",
+          "price": 32,
+          "is_vegetarian": true
+        }
+      ]
+    },
+    {
+      "id": "cong-you-bing",
+      "name_zh": "蔥油餅系列",
+      "name_en": "Scallion Pancake Series",
+      "items": [
+        {
+          "id": "cong-you-bing-he-bao",
+          "name_zh": "蔥油餅夾荷包蛋",
+          "name_en": "Scallion Pancake with Fried Egg",
+          "price": 45,
+          "is_vegetarian": true
+        },
+        {
+          "id": "cong-you-bing-cong-dan",
+          "name_zh": "蔥油餅夾蔥蛋",
+          "name_en": "Scallion Pancake with Scallion Egg",
+          "price": 52,
+          "is_vegetarian": true
+        },
+        {
+          "id": "cong-you-bing",
+          "name_zh": "蔥油餅",
+          "name_en": "Scallion Pancake",
+          "price": 30,
+          "is_vegetarian": true
+        }
+      ]
+    },
+    {
+      "id": "mantou-baozi",
+      "name_zh": "饅頭包子系列",
+      "name_en": "Steamed Buns Series",
+      "items": [
+        {
+          "id": "mantou-cong-dan",
+          "name_zh": "饅頭夾蔥蛋",
+          "name_en": "Steamed Bun with Scallion Egg",
+          "price": 42,
+          "is_vegetarian": true
+        },
+        {
+          "id": "mantou",
+          "name_zh": "饅頭",
+          "name_en": "Steamed Bun",
+          "price": 20,
+          "is_vegetarian": true
+        },
+        {
+          "id": "mantou-he-bao",
+          "name_zh": "饅頭夾荷包蛋",
+          "name_en": "Steamed Bun with Fried Egg",
+          "price": 35,
+          "is_vegetarian": true
+        },
+        {
+          "id": "xiao-long-bao",
+          "name_zh": "小籠包一粒",
+          "name_en": "Xiaolongbao (per piece)",
+          "price": 12,
+          "is_vegetarian": false
+        },
+        {
+          "id": "rou-bao",
+          "name_zh": "肉包",
+          "name_en": "Pork Bun",
+          "price": 24,
+          "is_vegetarian": false
+        }
+      ]
+    },
+    {
+      "id": "dou-jiang",
+      "name_zh": "豆漿系列",
+      "name_en": "Soy Milk Series",
+      "items": [
+        {
+          "id": "xian-dou-jiang-dan",
+          "name_zh": "鹹豆漿加蛋",
+          "name_en": "Savory Soy Milk with Egg",
+          "price": 47,
+          "is_vegetarian": true
+        },
+        {
+          "id": "xian-dou-jiang",
+          "name_zh": "鹹豆漿",
+          "name_en": "Savory Soy Milk",
+          "price": 32,
+          "is_vegetarian": true
+        },
+        {
+          "id": "dou-jiang-dan",
+          "name_zh": "豆漿加蛋",
+          "name_en": "Soy Milk with Egg",
+          "price": 42,
+          "is_vegetarian": true
+        },
+        {
+          "id": "tian-dou-jiang",
+          "name_zh": "甜豆漿.熱.溫.冰",
+          "name_en": "Sweet Soy Milk (Hot/Warm/Cold)",
+          "price": 27,
+          "is_vegetarian": true
+        },
+        {
+          "id": "ban-tang-dou-jiang",
+          "name_zh": "半糖豆漿.熱.溫",
+          "name_en": "Half Sugar Soy Milk (Hot/Warm)",
+          "price": 27,
+          "is_vegetarian": true
+        },
+        {
+          "id": "wu-tang-dou-jiang",
+          "name_zh": "無糖熱豆漿",
+          "name_en": "Unsweetened Hot Soy Milk",
+          "price": 27,
+          "is_vegetarian": true
+        },
+        {
+          "id": "dou-jiang-hong-cha",
+          "name_zh": "豆漿加紅茶.溫.紅",
+          "name_en": "Soy Milk with Black Tea",
+          "price": 27,
+          "is_vegetarian": true
+        }
+      ]
+    },
+    {
+      "id": "drinks",
+      "name_zh": "飲料",
+      "name_en": "Drinks",
+      "items": [
+        {
+          "id": "bing-hong-cha",
+          "name_zh": "冰 紅 茶",
+          "name_en": "Iced Black Tea",
+          "price": 22,
+          "is_vegetarian": true
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "name_zh": "配菜小點",
+      "name_en": "Side Dishes",
+      "items": [
+        {
+          "id": "you-tiao",
+          "name_zh": "油條",
+          "name_en": "Fried Dough Stick",
+          "price": 22,
+          "is_vegetarian": true
+        },
+        {
+          "id": "hong-dou-bing",
+          "name_zh": "红豆餅",
+          "name_en": "Red Bean Pancake",
+          "price": 27,
+          "is_vegetarian": true
+        },
+        {
+          "id": "cong-dan",
+          "name_zh": "蔥蛋",
+          "name_en": "Scallion Egg",
+          "price": 22,
+          "is_vegetarian": true
+        },
+        {
+          "id": "he-bao-dan",
+          "name_zh": "荷包蛋.半熟.全熟",
+          "name_en": "Fried Egg (Runny/Well-done)",
+          "price": 15,
+          "is_vegetarian": true
+        },
+        {
+          "id": "rou-bing",
+          "name_zh": "肉餅",
+          "name_en": "Meat Pancake",
+          "price": 30,
+          "is_vegetarian": false
+        }
+      ]
+    }
+  ]
+}

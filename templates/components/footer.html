@@ -1,0 +1,102 @@
+<footer id="contact" class="bg-amber-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Restaurant Info -->
+            <div>
+                <h3 class="text-2xl font-bold mb-4">{{ restaurant.name_zh }}</h3>
+                <p class="text-amber-100 mb-2">{{ restaurant.name_en }}</p>
+                {% if restaurant.tagline_zh %}
+                <p class="text-amber-200 text-sm">{{ restaurant.tagline_zh }}</p>
+                {% endif %}
+            </div>
+            
+            <!-- Contact Information -->
+            <div>
+                <h4 class="text-lg font-bold mb-4 text-amber-100">聯絡資訊 | Contact Info</h4>
+                
+                <!-- Address -->
+                <div class="mb-4">
+                    <div class="flex items-start space-x-2 mb-1">
+                        <svg class="h-5 w-5 text-amber-300 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <div>
+                            <p class="text-amber-50">{{ restaurant.address_zh }}</p>
+                            <p class="text-amber-200 text-sm">{{ restaurant.address_en }}</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query={{ restaurant.address_en | urlencode }}" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="inline-block mt-2 text-amber-300 hover:text-amber-100 text-sm underline">
+                                在地圖上查看 | View on Map
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Phone -->
+                <div class="mb-4">
+                    <div class="flex items-center space-x-2">
+                        <svg class="h-5 w-5 text-amber-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        <a href="tel:{{ restaurant.phone }}" class="text-amber-50 hover:text-amber-200 transition-colors">
+                            {{ restaurant.phone }}
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hours -->
+                <div class="flex items-start space-x-2">
+                    <svg class="h-5 w-5 text-amber-300 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <div>
+                        <p class="text-amber-50">{{ restaurant.hours_zh }}</p>
+                        <p class="text-amber-200 text-sm">{{ restaurant.hours_en }}</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map / Quick Actions -->
+            <div>
+                <h4 class="text-lg font-bold mb-4 text-amber-100">位置 | Location</h4>
+                
+                <!-- Google Maps Embed -->
+                <div class="rounded-lg overflow-hidden shadow-lg mb-4">
+                    <iframe 
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=No.+59+Dean+1st+St+Hualien+City+Hualien+County+970+Taiwan&zoom=15"
+                        width="100%" 
+                        height="200" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
+                <!-- Contact Buttons -->
+                <div class="space-y-2">
+                    <a href="tel:{{ restaurant.phone }}" 
+                       class="block w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                        📞 立即致電 | Call Now
+                    </a>
+                    <a href="https://wa.me/886{{ restaurant.phone.replace('0', '', 1).replace('-', '') }}" 
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="block w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg text-center transition-colors">
+                        💬 WhatsApp 訂餐
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="border-t border-amber-800 mt-8 pt-8 text-center">
+            <p class="text-amber-200 text-sm">
+                &copy; {{ "now"|datetime_format("%Y") }} {{ restaurant.name_zh }} | {{ restaurant.name_en }}. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>

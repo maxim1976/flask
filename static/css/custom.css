@@ -1,0 +1,54 @@
+/* Custom styles if needed - Tailwind CSS handles most styling */
+body {
+    /* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Offset for sticky header */
+#menu, #contact {
+    scroll-margin-top: 80px;
+}
+
+/* Print styles */
+@media print {
+    header nav,
+    .no-print,
+    button,
+    iframe {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+    }
+    
+    .menu-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+/* Enhanced focus styles for accessibility */
+a:focus, button:focus {
+    outline: 3px solid #d97706;
+    outline-offset: 2px;
+}
+
+/* Mobile menu animation */
+.mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+.mobile-menu.hidden {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.mobile-menu:not(.hidden) {
+    opacity: 1;
+    max-height: 500px;
+}
+
+}

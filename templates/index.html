@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}{{ restaurant.name_zh }} | {{ restaurant.name_en }}{% endblock %}
+{% block meta_description %}{{ restaurant.description_zh }} | {{ restaurant.description_en }}{% endblock %}
+
+{% block extra_head %}
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "{{ restaurant.name_zh }}",
+  "alternateName": "{{ restaurant.name_en }}",
+  "description": "{{ restaurant.description_zh }}",
+  "image": "{{ url_for('static', filename='images/logo.png', _external=True) }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No. 59, Dean 1st St",
+    "addressLocality": "Hualien City",
+    "addressRegion": "Hualien County",
+    "postalCode": "970",
+    "addressCountry": "TW"
+  },
+  "telephone": "+886-{{ restaurant.phone }}",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "05:30",
+      "closes": "10:30"
+    }
+  ],
+  "servesCuisine": "Taiwanese Breakfast",
+  "priceRange": "NT$15-NT$66",
+  "acceptsReservations": "False"
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<!-- Header Section -->
+{% include 'components/header.html' %}
+
+<main id="main-content">
+    <!-- Hero Section -->
+    {% include 'components/hero.html' %}
+
+    <!-- Menu Section -->
+    {% include 'components/menu.html' %}
+
+    <!-- Contact/Footer Section -->
+    {% include 'components/footer.html' %}
+</main>
+
+<!-- Mobile Menu Toggle JavaScript -->
+<script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
+</script>
+{% endblock %}

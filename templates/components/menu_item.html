@@ -1,0 +1,43 @@
+<div class="bg-amber-50 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 p-6 border border-amber-100 hover:border-amber-300">
+    <!-- Item Header with Vegetarian Badge -->
+    <div class="flex justify-between items-start mb-3">
+        <div class="flex-1">
+            <h4 class="text-xl font-bold text-gray-900 mb-1">
+                {{ item.name_zh }}
+            </h4>
+            <p class="text-base text-gray-600">
+                {{ item.name_en }}
+            </p>
+        </div>
+        
+        <!-- Vegetarian Badge -->
+        {% if item.is_vegetarian %}
+        <div class="ml-3 flex-shrink-0">
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 border border-green-300">
+                <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                素食
+            </span>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Description -->
+    {% if item.description_zh %}
+    <div class="mb-4">
+        <p class="text-sm text-gray-700 mb-1">{{ item.description_zh }}</p>
+        <p class="text-xs text-gray-500">{{ item.description_en }}</p>
+    </div>
+    {% endif %}
+
+    <!-- Price -->
+    <div class="flex justify-between items-center mt-4 pt-4 border-t border-amber-200">
+        <span class="text-2xl font-bold text-amber-700">
+            NT$ {{ item.price }}
+        </span>
+        <button class="bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
+            加入訂單
+        </button>
+    </div>
+</div>

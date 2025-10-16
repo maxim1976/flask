@@ -1,0 +1,36 @@
+<section id="menu" class="menu py-16 px-4 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <!-- Menu Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl sm:text-5xl font-bold text-amber-900 mb-4">
+                菜單 | Menu
+            </h2>
+            <p class="text-lg text-gray-600">
+                新鮮現做，道地好味 | Freshly Made, Authentic Taste
+            </p>
+        </div>
+
+        <!-- Menu Categories -->
+        {% for category in categories %}
+        <div class="mb-16">
+            <!-- Category Header -->
+            <div class="mb-8">
+                <h3 class="text-3xl font-bold text-amber-800 mb-2">
+                    {{ category.name_zh }}
+                </h3>
+                <p class="text-xl text-amber-600">
+                    {{ category.name_en }}
+                </p>
+                <div class="mt-3 w-24 h-1 bg-amber-500 rounded"></div>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {% for item in category['items'] %}
+                {% include 'components/menu_item.html' %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
