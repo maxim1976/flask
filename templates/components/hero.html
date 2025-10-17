@@ -1,43 +1,43 @@
-<section class="hero py-16 sm:py-20 lg:py-24 relative overflow-hidden" style="background-image: url('{{ url_for('static', filename='images/exterior1.jpg') }}'); background-size: cover; background-position: center; background-attachment: fixed;">
+<section class="hero py-16 sm:py-20 lg:py-24 relative overflow-hidden" style="background-image: url('{{ url_for('static', filename='images/exterior1.jpg') }}'); background-size: cover; background-position: center; background-attachment: scroll;" class="bg-cover bg-center">
     <!-- Dark overlay for text readability -->
-    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute inset-0 bg-black/50 md:bg-black/40"></div>
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center">
             <!-- Restaurant Name -->
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg">
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg">
                 {{ restaurant.name_zh }}
             </h1>
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-amber-100 mb-6 drop-shadow-lg">
+            <h2 class="text-xl sm:text-3xl lg:text-4xl font-semibold text-amber-100 mb-6 drop-shadow-lg">
                 {{ restaurant.name_en }}
             </h2>
             
             <!-- Tagline -->
             {% if restaurant.tagline_zh %}
-            <div class="text-xl sm:text-2xl mb-8">
+            <div class="text-lg sm:text-2xl mb-8">
                 <p class="font-medium text-amber-100 drop-shadow-lg">{{ restaurant.tagline_zh }}</p>
-                <p class="text-lg text-amber-50 drop-shadow-lg">{{ restaurant.tagline_en }}</p>
+                <p class="text-base sm:text-lg text-amber-50 drop-shadow-lg">{{ restaurant.tagline_en }}</p>
             </div>
             {% endif %}
             
             <!-- Description -->
-            <p class="text-lg sm:text-xl text-gray-100 mb-4 max-w-3xl mx-auto drop-shadow-lg">
+            <p class="text-base sm:text-xl text-gray-100 mb-4 max-w-3xl mx-auto drop-shadow-lg">
                 {{ restaurant.description_zh }}
             </p>
-            <p class="text-base sm:text-lg text-gray-200 mb-8 max-w-3xl mx-auto drop-shadow-lg">
+            <p class="text-sm sm:text-lg text-gray-200 mb-8 max-w-3xl mx-auto drop-shadow-lg">
                 {{ restaurant.description_en }}
             </p>
             
             <!-- Business Hours -->
-            <div class="inline-block bg-white rounded-lg shadow-md px-6 py-4 sm:px-8 sm:py-6">
-                <div class="flex items-center justify-center space-x-3 mb-2">
-                    <svg class="h-6 w-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="inline-block bg-white rounded-lg shadow-md px-4 py-3 sm:px-8 sm:py-6">
+                <div class="flex items-center justify-center space-x-2 sm:space-x-3 mb-2">
+                    <svg class="h-5 w-5 sm:h-6 sm:w-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
-                    <h3 class="text-xl font-bold text-gray-800">營業時間 | Business Hours</h3>
+                    <h3 class="text-base sm:text-xl font-bold text-gray-800">營業時間 | Business Hours</h3>
                 </div>
-                <p class="text-lg text-amber-700 font-semibold">{{ restaurant.hours_zh }}</p>
-                <p class="text-base text-amber-600">{{ restaurant.hours_en }}</p>
+                <p class="text-base sm:text-lg text-amber-700 font-semibold">{{ restaurant.hours_zh }}</p>
+                <p class="text-sm sm:text-base text-amber-600">{{ restaurant.hours_en }}</p>
             </div>
             
             <!-- CTA Button -->
